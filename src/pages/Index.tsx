@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { ConceptCard } from '@/components/ConceptCard';
 import { DomainImpactCard } from '@/components/DomainImpactCard';
-import { Brain, Cpu, Network, Server, MessageSquare, Code, TrendingUp, BookOpen, GraduationCap, Library } from 'lucide-react';
+import { Brain, Cpu, Network, Server, MessageSquare, Code, TrendingUp, BookOpen, GraduationCap, Library, MessageCircle, Sparkles, Lightbulb, PenTool } from 'lucide-react';
 
 const Index = () => {
   const concepts = [
@@ -121,6 +121,17 @@ const Index = () => {
             className="text-emerald-600 hover:text-emerald-700 underline"
           >
             Start with Andrew Ng's Machine Learning Course on Coursera
+          </a>
+          {' - clear explanations for non-technical audiences'}
+        </>,
+        <>
+          <a 
+            href="https://www.anthropic.com/ai-fluency" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-emerald-600 hover:text-emerald-700 underline"
+          >
+            Anthropic's AI Fluency Course
           </a>
           {' - clear explanations for non-technical audiences'}
         </>,
@@ -258,16 +269,87 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 border border-emerald-100">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center">
-              <Brain className="text-white" size={32} />
-            </div>
-            <h3 className="text-2xl font-bold text-stone-800 mb-4">The Big Picture</h3>
-            <p className="text-stone-600 text-lg max-w-3xl mx-auto">
-              AI is transforming how we work, create, and solve problems. Understanding these concepts 
-              helps you leverage AI tools effectively and stay ahead in the evolving digital landscape.
+        {/* Prompt Engineering Section */}
+        <div className="mt-24 mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-stone-800 mb-4">
+              Prompt Engineering
+            </h3>
+            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
+              Mastering the art of communicating with AI language models
             </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            {/* Intro Card with Icon */}
+            <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-8 border border-purple-100 mb-10">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center">
+                <MessageCircle className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-stone-800 mb-4 text-center">What is Prompt Engineering?</h3>
+              <p className="text-stone-600 text-lg max-w-3xl mx-auto text-center">
+                Prompt engineering is the practice of crafting effective instructions and queries to get the best results from AI language models. Just like giving clear directions to a colleague, the way you communicate with AI directly impacts the quality and relevance of its responses. A well-engineered prompt can mean the difference between a generic answer and a precisely tailored solution that meets your specific needs.
+              </p>
+            </div>
+
+            {/* Content Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Card 1 */}
+              <div className="bg-white rounded-xl shadow-sm p-8 border border-stone-100">
+                <div className="w-12 h-12 mb-4 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center">
+                  <PenTool className="text-white" size={24} />
+                </div>
+                <h4 className="font-bold text-xl text-stone-800 mb-3">The Power of Specificity</h4>
+                <p className="text-stone-600 mb-4">
+                  The more specific and detailed your prompts, the better the AI can understand and fulfill your request. Instead of asking "Write about marketing," try "Write a 300-word email to potential customers explaining the benefits of our new project management software for small businesses."
+                </p>
+                <p className="text-stone-600">
+                  Include context, desired format, target audience, and specific requirements to guide the AI toward exactly what you need.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white rounded-xl shadow-sm p-8 border border-stone-100">
+                <div className="w-12 h-12 mb-4 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center">
+                  <Sparkles className="text-white" size={24} />
+                </div>
+                <h4 className="font-bold text-xl text-stone-800 mb-3">Using Examples and Structure</h4>
+                <p className="text-stone-600 mb-4">
+                  Providing examples in your prompts dramatically improves results. Show the AI what good output looks like by including sample formats, styles, or approaches.
+                </p>
+                <p className="text-stone-600">
+                  You can also use structured prompts with clear sections like "Context," "Task," and "Requirements" to organize your instructions. This technique, often called few-shot prompting, helps the AI understand patterns and replicate the quality you're seeking.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white rounded-xl shadow-sm p-8 border border-stone-100">
+                <div className="w-12 h-12 mb-4 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center">
+                  <Code className="text-white" size={24} />
+                </div>
+                <h4 className="font-bold text-xl text-stone-800 mb-3">Common Techniques That Work</h4>
+                <p className="text-stone-600 mb-4">
+                  Several proven strategies can enhance your prompts: ask the AI to think step-by-step for complex problems, specify the role you want it to take (like "act as a financial advisor"), and use positive language to describe what you want rather than what you don't want.
+                </p>
+                <p className="text-stone-600">
+                  You can also request specific formats like bullet points, tables, or code snippets to get outputs that fit seamlessly into your workflow.
+                </p>
+              </div>
+
+              {/* Card 4 */}
+              <div className="bg-white rounded-xl shadow-sm p-8 border border-stone-100">
+                <div className="w-12 h-12 mb-4 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center">
+                  <Lightbulb className="text-white" size={24} />
+                </div>
+                <h4 className="font-bold text-xl text-stone-800 mb-3">Iteration and Refinement</h4>
+                <p className="text-stone-600 mb-4">
+                  Prompt engineering is an iterative process. Start with a basic prompt, evaluate the results, then refine your approach based on what works and what doesn't.
+                </p>
+                <p className="text-stone-600">
+                  If the output is too broad, add more constraints. If it's too technical, ask for simpler language. Think of each interaction as a learning opportunity to improve your communication with AI systems and achieve more consistent, high-quality results.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </main>
