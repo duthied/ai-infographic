@@ -9,7 +9,7 @@ interface DomainImpactCardProps {
   icon: LucideIcon;
   color: string;
   description: string;
-  impacts: string[];
+  impacts: (string | React.ReactNode)[];
 }
 
 export const DomainImpactCard: React.FC<DomainImpactCardProps> = ({

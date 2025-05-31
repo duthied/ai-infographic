@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { ConceptCard } from '@/components/ConceptCard';
 import { DomainImpactCard } from '@/components/DomainImpactCard';
-import { Brain, Cpu, Network, Server, MessageSquare, Code, TrendingUp, BookOpen, GraduationCap, Library, Building2, Users, Video } from 'lucide-react';
+import { Brain, Cpu, Network, Server, MessageSquare, Code, TrendingUp, BookOpen, GraduationCap, Library } from 'lucide-react';
 
 const Index = () => {
   const concepts = [
@@ -113,8 +113,17 @@ const Index = () => {
       color: 'from-emerald-400 to-teal-400',
       description: 'Perfect for complete beginners',
       impacts: [
-        'Start with Andrew Ng\'s Machine Learning Course on Coursera - clear explanations for non-technical audiences',
-        'Read "AI for Non-Programmers" to understand concepts without coding',
+        <>
+          <a 
+            href="https://www.coursera.org/collections/machine-learning" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-emerald-600 hover:text-emerald-700 underline"
+          >
+            Start with Andrew Ng's Machine Learning Course on Coursera
+          </a>
+          {' - clear explanations for non-technical audiences'}
+        </>,
         'Watch YouTube channels like "3Blue1Brown" for visual explanations of neural networks',
         'Try ChatGPT, Claude, or Gemini daily to understand capabilities and limitations'
       ]
@@ -126,7 +135,16 @@ const Index = () => {
       color: 'from-amber-400 to-orange-400',
       description: 'Hands-on experience and deeper understanding',
       impacts: [
-        'Take the Fast.ai course - practical deep learning without heavy math prerequisites',
+        <>
+          <a 
+              href="https://course17.fast.ai/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-emerald-600 hover:text-emerald-700 underline"
+            >
+              Take the Fast.ai course - practical deep learning without heavy math prerequisites
+            </a>
+        </>,
         'Build simple projects: chatbots, image classifiers, or text summarizers',
         'Join AI communities like Hugging Face, Reddit r/MachineLearning, or Discord servers',
         'Experiment with no-code AI tools like Google\'s Teachable Machine or RunwayML'
@@ -147,47 +165,6 @@ const Index = () => {
     }
   ];
 
-  const internalResources = [
-    {
-      id: 'workshops',
-      title: 'Internal Workshops',
-      icon: Users,
-      color: 'from-emerald-400 to-teal-400',
-      description: 'Company-specific AI training sessions',
-      impacts: [
-        '[Placeholder] Monthly AI workshops for different skill levels',
-        '[Placeholder] Hands-on sessions with company data and use cases',
-        '[Placeholder] Expert-led discussions on AI implementation strategies',
-        '[Placeholder] Cross-departmental collaboration opportunities'
-      ]
-    },
-    {
-      id: 'documentation',
-      title: 'Knowledge Base',
-      icon: Building2,
-      color: 'from-amber-400 to-orange-400',
-      description: 'Internal AI documentation and guidelines',
-      impacts: [
-        '[Placeholder] Company AI policy and best practices documentation',
-        '[Placeholder] Internal case studies and success stories',
-        '[Placeholder] Tool-specific guides for approved AI platforms',
-        '[Placeholder] FAQ section for common AI-related questions'
-      ]
-    },
-    {
-      id: 'mentorship',
-      title: 'Mentorship Program',
-      icon: Video,
-      color: 'from-stone-400 to-neutral-400',
-      description: 'Peer-to-peer AI learning and support',
-      impacts: [
-        '[Placeholder] AI champion network across departments',
-        '[Placeholder] Regular lunch-and-learn sessions',
-        '[Placeholder] Internal AI project showcase events',
-        '[Placeholder] One-on-one mentoring for AI tool adoption'
-      ]
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-50 via-neutral-50 to-amber-50">
@@ -248,20 +225,6 @@ const Index = () => {
           </div>
 
           {/* Internal Learning Resources Sub-section */}
-          <div className="text-center mb-12">
-            <h4 className="text-2xl md:text-3xl font-bold text-stone-800 mb-4">
-              Internal Learning Resources
-            </h4>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              Company-specific training and support to accelerate your AI journey
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {internalResources.map((resource) => (
-              <DomainImpactCard key={resource.id} {...resource} />
-            ))}
-          </div>
         </div>
 
         <div className="mt-20 text-center">
