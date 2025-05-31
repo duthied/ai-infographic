@@ -61,7 +61,6 @@
     "vaul": "^0.9.3",
     "zod": "^3.23.8"
   },
-  "homepage": "https://duthied.github.io/ai-infographic/",
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@tailwindcss/typography": "^0.5.15",
