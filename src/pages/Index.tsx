@@ -227,6 +227,37 @@ const Index = () => {
           {/* Internal Learning Resources Sub-section */}
         </div>
 
+        {/* Getting Started Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-stone-800 mb-4">
+              <span className="mr-2">🚀</span>Getting Started
+            </h3>
+            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
+              Step-by-Step Approach to Implementing AI in Your Organization
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="bg-white rounded-xl shadow-sm p-6 border border-stone-100">
+              <h4 className="font-bold text-lg text-stone-800 mb-2">Identify Use Cases</h4>
+              <p className="text-stone-600">Look for repetitive, time-consuming tasks in your role</p>
+            </div>
+            <div className="bg-white rounded-xl shadow-sm p-6 border border-stone-100">
+              <h4 className="font-bold text-lg text-stone-800 mb-2">Start Small</h4>
+              <p className="text-stone-600">Begin with pilot projects that have clear success metrics</p>
+            </div>
+            <div className="bg-white rounded-xl shadow-sm p-6 border border-stone-100">
+              <h4 className="font-bold text-lg text-stone-800 mb-2">Learn & Experiment</h4>
+              <p className="text-stone-600">Try AI tools safely in controlled environments</p>
+            </div>
+            <div className="bg-white rounded-xl shadow-sm p-6 border border-stone-100">
+              <h4 className="font-bold text-lg text-stone-800 mb-2">Scale Gradually</h4>
+              <p className="text-stone-600">Expand successful pilots to broader implementation</p>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 border border-emerald-100">
             <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center">
